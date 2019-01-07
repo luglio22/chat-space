@@ -1,0 +1,23 @@
+= render partial:"notification"
+
+.chat-side
+  .chat-side__user
+    .chat-side__user-contents
+      .chat-side__user-name
+        gutti
+        .chat-side__user--new-group
+          =link_to root_path do
+            %i.fa.fa-pencil-square-o
+        .chat-side__user--edit-user
+          =link_to root_path do
+            %i.fa.fa-cog
+  .chat-side__groups
+    .chat-side__groups-lists
+      =link_to root_path
+      .chat-side__group
+        .chat-side__group-name
+          sample
+        .chat-side__group-message
+          test
+
+=render partial:"main-chat"
