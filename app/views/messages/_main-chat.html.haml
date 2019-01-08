@@ -22,7 +22,7 @@
     %form.chat-main__footer-form
       .chat-main__footer-body
         %input.message{placeholder: "type a message", type: "text"}/
-        %label.chat-imgfile
-        %i.fa.fa-image
-        %input.submit{type: "submit", value: "Send"}/
-        .chat-file
+        %label.chat-file
+          %input.image{type: "file", name: "message[image]"}
+          %i.fa.fa-image
+      %input.submit{type: "submit", value: "Send"}/

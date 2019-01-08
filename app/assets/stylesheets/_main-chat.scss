@@ -85,7 +85,6 @@
     }
     &-body{
       position: relative;
-      margin: 0 40px;
 
       .message{
         height: 50px;
@@ -96,34 +95,37 @@
         box-sizing: border-box;
       }
 
-      .chat-imgfile{
-        box-sizing: border-box;
-      }
+        .chat-file{
+          height: 50px;
+          width: 40px;
+          margin: 32px 130px 20px 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+          .image{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: none;
+          }
 
-      .image{
-        box-sizing:border-box;
-      }
-
-      .fa-image{
-        position:relative;
-        clear:both;
-      }
-
-      .submit{
-        color:#fff;
-        width:100px;
-        height:50px;
-        text-align: center;
-        background-color:#38AEF0;
-        margin: 20px 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border: none;
-      }
-
-
+          .fa-image{
+          }
     }
+    .submit{
+      color:#fff;
+      width:100px;
+      height:50px;
+      text-align: center;
+      background-color:#38AEF0;
+      margin: 20px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+    }
+
   }
 
 }
