@@ -1,16 +1,14 @@
-= render partial:"notification"
-
 .chat-side
   .chat-side__user
     .chat-side__user-contents
       .chat-side__user-name
-        gutti
+        = current_user.name
         .chat-side__user--new-group
           =link_to root_path do
             %i.fa.fa-pencil-square-o
         .chat-side__user--edit-user
-          =link_to root_path do
-            %i.fa.fa-cog
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'icon'
   .chat-side__groups
     .chat-side__groups-lists
       =link_to root_path
