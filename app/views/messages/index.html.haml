@@ -11,19 +11,14 @@
       %i gutti
   .chat-main__body
     .chat-main__body--message-list
-      .chat-main__message
-        .chat-main__message-name
-          gutti
-        .chat-main__message-time
-          2019/0101 00:00:00
-        .chat-main__message-body
-          テスト
-          .chat-main__message-body-image
+      = render @messages
   .chat-main__footer
-    %form.chat-main__footer-form
-      .chat-main__footer-body
-        %input.message{placeholder: "type a message", type: "text"}/
-        %label.chat-file
-          %input.image{type: "file", name: "message[image]"}
-          %i.fa.fa-image
-      %input.submit{type: "submit", value: "Send"}/
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
