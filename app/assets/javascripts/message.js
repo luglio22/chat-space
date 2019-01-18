@@ -36,6 +36,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__body--message-list').append(html)
+      $(".chat-main__body").animate({scrollTop:$('.chat-main__body--message__list')[0].scrollHeight},500,'swing');
       $('.chat-main__message').val('')
     })
     .fail(function(){
