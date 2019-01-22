@@ -11,9 +11,9 @@ $(document).on('turbolinks:load', function() {
     search_list.append(html);
   }
 
-  function appendNoUser(errorText) {
+  function appendNoUser() {
     var html = `<div class="chat-group-user clearfix">
-                <p class="chat-group-user__name">${ errorText }</p>
+                <p class="chat-group-user__name">${ json.name }</p>
                 </div>`
     search_list.append(html);
   }
