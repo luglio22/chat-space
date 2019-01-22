@@ -47,7 +47,7 @@ $(document).on('turbolinks:load', function() {
           });
         }
         else {
-          appendNoUser("一致するユーザーはいません");
+          appendNoUser();
         }
       })
 
