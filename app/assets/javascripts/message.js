@@ -7,7 +7,7 @@ $(function(){
                 ${message.name}
                 </div>
                 <div class="chat-main__message-time">
-                ${message.strftime}
+                ${message.create_time}
                 </div>
                 <div class="chat-main__message-body">
                 </div>
@@ -62,9 +62,9 @@ $(function(){
     })
     .done(function(message){
       message.forEach(function(message){
-        var html = buildHTML(message);
-        $('.chat-main__body--message-list').append(html);
-        $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight
+      var html = buildHTML(message);
+      $('.chat-main__body--message-list').append(html);
+      $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight
       })
       })
     })
